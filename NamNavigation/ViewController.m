@@ -7,6 +7,7 @@
 //
 
 #import "ViewController.h"
+#import "secondViewController.h"
 
 @interface ViewController ()
 
@@ -24,4 +25,9 @@
     // Dispose of any resources that can be recreated.
 }
 
+- (IBAction)NextAction:(id)sender {
+    secondViewController *secondView = [self.storyboard instantiateViewControllerWithIdentifier:@"secondViewController"];
+    secondView.valueFromPink = self.textField.text;
+    [self.navigationController pushViewController:secondView animated:YES];
+}
 @end

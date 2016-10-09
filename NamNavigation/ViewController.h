@@ -10,6 +10,8 @@
 
 @interface ViewController : UIViewController
 
+- (IBAction)NextAction:(id)sender;
+@property (strong, nonatomic) IBOutlet UITextField *textField;
 
 @end
 
